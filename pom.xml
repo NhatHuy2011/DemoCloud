@@ -5,7 +5,7 @@
 	<groupId>JobSeeking</groupId>
 	<artifactId>JobSeeking</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<build>
 		<plugins>
 			<plugin>
@@ -16,6 +16,11 @@
 					<source>1.8</source>
 					<target>1.8</target>
 				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>
@@ -141,11 +146,18 @@
 			<version>4.0.1</version> <!-- Hoặc phiên bản servlet-api mà bạn đang sử dụng -->
 			<scope>provided</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>com.google.cloud.sql</groupId>
 			<artifactId>mysql-socket-factory</artifactId>
 			<version>1.0.16</version>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<version>2.6.0</version>
+		</dependency>
+
 	</dependencies>
 </project>
