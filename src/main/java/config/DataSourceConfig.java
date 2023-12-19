@@ -10,9 +10,9 @@ public class DataSourceConfig {
 	public DriverManagerDataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-	    dataSource.setUrl("jdbc:mysql://google/occupationdb?cloudSqlInstance=cloudnhom12:asia-southeast1:jobseeking&socketFactory=com.google.cloud.sql.mysql.SocketFactory&user=root&password=");
+	    dataSource.setUrl("jdbc:mysql://localhost:3306/occupationdb");
 	    dataSource.setUsername("root");
-	    dataSource.setPassword("");
+	    dataSource.setPassword("kieuduyen20112000");
 	    return dataSource;
 	}
 }

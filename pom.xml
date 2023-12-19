@@ -5,7 +5,7 @@
 	<groupId>JobSeeking</groupId>
 	<artifactId>JobSeeking</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	<build>
 		<plugins>
 			<plugin>
@@ -16,12 +16,6 @@
 					<source>1.8</source>
 					<target>1.8</target>
 				</configuration>
-			</plugin>
-			
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefile-plugin</artifactId>
-				<version>3.0.0-M5</version>
 			</plugin>
 		</plugins>
 	</build>
