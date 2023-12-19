@@ -138,16 +138,16 @@
 
 	<build>
 		<plugins>
-		 <!-- Plugin Maven War để đóng gói ứng dụng web -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.2.3</version>
-                <configuration>
-                    <!-- Cấu hình tên thư mục gốc của ứng dụng web -->
-                    <warName>JobSeeking</warName>
-                </configuration>
-            </plugin>
+			<!-- Plugin Maven War để đóng gói ứng dụng web -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.2.3</version>
+				<configuration>
+					<!-- Cấu hình tên thư mục gốc của ứng dụng web -->
+					<warName>JobSeeking</warName>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -158,25 +158,30 @@
 				</configuration>
 			</plugin>
 			<!-- Plugin Tomcat Maven để chạy ứng dụng trong quá trình phát triển -->
-            <plugin>
-                <groupId>org.apache.tomcat.maven</groupId>
-                <artifactId>tomcat7-maven-plugin</artifactId>
-                <version>2.2</version>
-                <executions>
-                    <execution>
-                        <id>tomcat-run</id>
-                        <goals>
-                            <goal>run-war</goal>
-                        </goals>
-                        <phase>pre-integration-test</phase>
-                        <configuration>
-                            <!-- Cấu hình cổng và context path của Tomcat -->
-                            <port>8080</port>
-                            <path>/JobSeeking</path>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<executions>
+					<execution>
+						<id>tomcat-run</id>
+						<goals>
+							<goal>run-war</goal>
+						</goals>
+						<phase>pre-integration-test</phase>
+						<configuration>
+							<!-- Cấu hình cổng và context path của Tomcat -->
+							<port>8080</port>
+							<path>/JobSeeking</path>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>com.google.cloud.tools</groupId>
+				<artifactId>appengine-maven-plugin</artifactId>
+				<version>1.3.2</version>
+			</plugin>
 		</plugins>
 	</build>
 </project>
